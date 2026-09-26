@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Cloudflare"
+version = "0.1.0"
+description = "its an Unofficial cloudflared libery"
+readme = "README.md"
+authors = [
+    { name = "Jean-Piere", email = "devjeanpiere@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+
+dependencies = [
+    "pynacl == 1.6.2",
+    "requests == 2.34.2",
+    "websockets >= 14.2, <= 15.0.1"
+]
+
+[project.scripts]
+pycloudflared = "cloudflared.Cli:cli"
